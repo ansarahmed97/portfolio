@@ -1,0 +1,85 @@
+#projects {
+  align-items: center;
+  background-color: #092834;
+}
+.home-h{
+  text-align: center;
+  font-family: 'Oswald', sans-serif;  margin: 0;
+  padding: 20px;
+  background-color: rgba(240, 248, 255, 0.425);
+
+}
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #092834;
+}
+.card {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  background-color: rgba(240, 248, 255, 0.425);
+  border-radius: 27px;
+}
+.card-img img {
+  width: 300px;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  border-radius: 27px;
+}
+.card-body {
+  margin-left: 30px;
+}
+.card-img a {
+  position: relative;
+  display: inline-block;
+}
+.card-img a::after {
+  content: "Open in GitHub to view source code";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px;
+  border-radius: 15px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.card-img a:hover::after {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  #projects {
+    align-items: center;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    margin: 20px 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-img img {
+    width: 400px;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 10px;
+    border-radius: 27px;
+  }
+  .card-body {
+    margin-left: 0;
+    text-align: center;
+  }
+}

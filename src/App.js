@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React, { useState, useRef, useEffect } from 'react';
+import Navbar from './Components/Navbar';
+import Home from './Components/Home';
+import Projects from './Components/Projects';
 import './App.css';
-
 function App() {
+  const [currentPage, setCurrentPage] = useState('home');
+  const projectsRef = useRef(null);
+  const homeRef = useRef(null);
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+  useEffect(() => {
+    if (currentPage === 'projects') {
+      projectsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else if (currentPage === 'home') {
+      homeRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [currentPage]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar onPageChange={handlePageChange} />
+      <div className="content">
+        <div ref={homeRef}>
+          <Home />
+        </div>
+        <div ref={projectsRef}>
+          <Projects />
+        </div>
+      </div>
+    </>
   );
 }
-
 export default App;
