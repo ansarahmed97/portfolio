@@ -8,7 +8,7 @@ const Projects = () => {
         <div className="card">
           <div className="card-img">
             <a href="https://github.com/ansarahmed97/iNotebook" target="_blank" rel="noopener noreferrer">
-              <img src="/iNotebook.svg" alt="..." title="Open in GitHub to view source code" />
+              <img src="iNotebook.svg" alt="..." title="Open in GitHub to view source code" />
             </a>
           </div>
           <div className="card-body">
