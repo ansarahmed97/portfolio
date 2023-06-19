@@ -23,13 +23,13 @@ const Home = () => {
               </a>
             </div>
             <div className="pdf">
-              <a href="/Ansar's Resume.pdf" target="_blank" rel="noopener noreferrer">My Resume</a>
+              <a href="Ansar's Resume.pdf" target="_blank" rel="noopener noreferrer">My Resume</a>
             </div>
           </fieldset>
         </div>
         <div className="img-container">
           <div className="main-img">
-            <img src="/ansar.svg" alt="Ansar Ahmed - A Front End Web Developer" />
+            <img src="ansar.svg" alt="Ansar Ahmed - A Front End Web Developer" />
           </div>
         </div>
       </div>
