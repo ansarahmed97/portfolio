@@ -105,6 +105,7 @@ legend:hover{
   .main-img{
     position: relative;
     margin-right: 0;
+    margin-left: 0;
   }
   .main-img img {
     width: 300px;
