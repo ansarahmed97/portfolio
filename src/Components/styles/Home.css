@@ -38,6 +38,7 @@ fieldset{
   border-radius: 27px;
 }
 legend{
+  width: 80%;
   background-color: rgba(240, 248, 255, 0.425);
   border-radius: 15px;
   padding: 15px;
@@ -103,12 +104,11 @@ legend:hover{
 
   }
   .main-img{
-    position: relative;
     margin-right: 0;
     margin-left: 0;
   }
   .main-img img {
-    width: 300px;
+    width:80%;
     height: auto;
   }
 }
