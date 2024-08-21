@@ -39,13 +39,13 @@ fieldset{
 }
 legend{
   width: 80%;
-  background-color: #141619;
+  background-color: rgba(240, 248, 255, 0.425);
   border-radius: 15px;
-  padding: 15px;
-  color: #B3B4BD;
+  padding: 15px;  color: #141619;
+
 }
 legend:hover{
-  background-color:#388de2;
+  background-color:#141619;
   border-radius: 15px;
   padding: 15px;
   color: aliceblue;
@@ -83,12 +83,10 @@ legend:hover{
   margin-top: 10px;
   color:#B3B4BD;
 }
-.pdf a{
+a{
+  color: #000;
   text-decoration: none;
-  color: #141619;
-
 }
-
 @media (max-width: 768px) {
   .home-container {
     display: flex;

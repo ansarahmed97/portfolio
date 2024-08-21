@@ -15,14 +15,15 @@ body {
   margin: 0;
   padding: 20px;
   font-size: 1.5rem;
-  background-color: rgba(240, 248, 255, 0.425);
+  background-color: #141619;
+  color: #B4B3BD;
 }
 
 .card-container {
   display: flex;
   flex-wrap: wrap; /* Enable wrapping for cards on smaller screens */
   justify-content: space-between;
-  background-color: #092834;
+  background-color: #B4B3BD;
 }
 
 .card-row { /* New style for the card row */
