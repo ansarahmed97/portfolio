@@ -58,7 +58,7 @@ const Home = () => {
               </a>
             </div>
             <div className="pdf">
-              <a href={process.env.PUBLIC_URL + "/Ansar's Resume.pdf"} target="_blank" rel="noopener noreferrer">My Resume</a>
+              <a href={process.env.PUBLIC_URL + "/Ansar's-Resume-IT.pdf"} target="_blank" rel="noopener noreferrer">My Resume</a>
             </div>
           </fieldset>
         </div>
