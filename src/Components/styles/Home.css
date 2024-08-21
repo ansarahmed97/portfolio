@@ -4,7 +4,7 @@ html, body {
 }
 .home-container {
   display: flex;
-  background-color: #092834;
+  background-color: #B3B4BD;
   justify-content: space-between;
   overflow: hidden;
   align-items: center;
@@ -12,7 +12,7 @@ html, body {
 .txt-container {
   margin-left: 90px;
   font-size: 1.3rem;
-  color:#B2D732 ;
+  color: #141619;
   font-family: 'Oswald', sans-serif;
 }
 .home-h1{
@@ -24,8 +24,8 @@ html, body {
   margin-top: 170px;
 }
 .main-img{
-  margin-right: 30px;
-  margin-bottom: -5px;
+  margin-right: 200px;
+  margin-bottom: 80px;
 
 }
 .main-img img {
@@ -39,10 +39,10 @@ fieldset{
 }
 legend{
   width: 80%;
-  background-color: rgba(240, 248, 255, 0.425);
+  background-color: #141619;
   border-radius: 15px;
   padding: 15px;
-  color: #092834;
+  color: #B3B4BD;
 }
 legend:hover{
   background-color:#388de2;
@@ -74,17 +74,21 @@ legend:hover{
   background-color: rgba(240, 248, 255, 0.425);
   border-radius: 27px;
   margin-top: 10px;
+  color: #141619;
 }
 .pdf:hover{
   padding: 10px;
-  background-color: #B2D732;
+  background-color: #092834;
   border-radius: 27px;
   margin-top: 10px;
+  color:#B3B4BD;
 }
 .pdf a{
   text-decoration: none;
-  color: #092834;
+  color: #141619;
+
 }
+
 @media (max-width: 768px) {
   .home-container {
     display: flex;
