@@ -45,7 +45,7 @@ const Home = () => {
           <h1 className="home-h1" ref={h1Ref}></h1>
           <h4 className="home-h4" ref={h4Ref}></h4>
           <fieldset>
-            <legend>Checkout</legend>
+            <legend>Connect</legend>
             <div className="social-icons">
               <a href="https://github.com/ansarahmed97" target="_blank" rel="noopener noreferrer">
                 <i className="fa-brands fa-github"></i>
