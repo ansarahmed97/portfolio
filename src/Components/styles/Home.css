@@ -28,10 +28,12 @@ html, body {
   margin-bottom: 80px;
 
 }
+
 .main-img img {
   width: 300px;
   height: auto;
 }
+
 fieldset{
   display: inline-block;
   text-align: center;
