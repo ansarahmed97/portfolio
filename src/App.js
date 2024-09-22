@@ -2,14 +2,18 @@ import React, { useState, useRef, useEffect } from 'react';
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import Projects from './Components/Projects';
+import Footer from './Components/Footer'; // Import Footer
 import './App.css';
+
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const projectsRef = useRef(null);
   const homeRef = useRef(null);
+
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+
   useEffect(() => {
     if (currentPage === 'projects') {
       projectsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -17,6 +21,7 @@ function App() {
       homeRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }, [currentPage]);
+
   return (
     <>
       <Navbar onPageChange={handlePageChange} />
@@ -28,7 +33,9 @@ function App() {
           <Projects />
         </div>
       </div>
+      <Footer /> {/* Add Footer component */}
     </>
   );
 }
+
 export default App;

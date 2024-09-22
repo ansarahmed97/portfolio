@@ -3,10 +3,12 @@
     background-color: #092834;
     overflow: hidden;
 }
+
 body {
     margin: 0;
     padding: 0;
 }
+
 .home-h {
     text-align: center;
     font-family: 'Oswald', sans-serif;
@@ -16,69 +18,60 @@ body {
     background-color: #141619;
     color: #B4B3BD;
 }
+
 .card-container {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: space-between;
     background-color: #B4B3BD;
 }
-.card-row { 
+
+.card-row {
     display: flex;
-    flex-wrap: nowrap; 
+    flex-wrap: nowrap;
     justify-content: space-between;
-    width: 100%; 
+    width: 100%;
 }
+
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 20px;
     background-color: rgba(240, 248, 255, 0.425);
     border-radius: 27px;
     padding: 5px;
-    flex: 0 0 25%;
+    flex: 0 0 30%; /* Ensures 3 columns with space between */
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-sizing: border-box; /* Ensures padding doesn't overflow the card */
 }
+
 .card:hover {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8));
-    backdrop-filter: blur(5px);
-    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    transform: scale(1.05); /* Slight scaling effect on hover */
 }
+
 .card-img {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto; 
+    height: auto;
 }
+
 .card-img img {
     width: 100%;
     height: auto;
-    margin: 0; 
+    margin: 0;
     border-radius: 27px;
 }
-.card-body {
-    position: relative;
-    height: 0;
-    overflow: hidden;
-    transition: height 0.5s ease-out;
-}
-.card:hover .card-body {
-    height: auto;
-    animation: slideDown 0.5s ease-out;
-}
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
+
 .card-img a {
     position: relative;
     display: inline-block;
 }
+
 .card-img a::after {
     content: "Open in GitHub to view source code";
     position: absolute;
@@ -93,9 +86,49 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
 .card-img a:hover::after {
     opacity: 1;
 }
+
+.card-body {
+    position: relative;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.card:hover .card-body {
+    max-height: 1000px;
+    padding: 20px;
+    opacity: 1;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+    position: relative;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #444;
+    margin: 10px 0;
+    text-align: center;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
 @media (max-width: 768px) {
     #projects {
         align-items: center;
@@ -112,7 +145,7 @@ body {
         width: 80%;
     }
     .card-img {
-        margin-bottom: 10px; 
+        margin-bottom: 10px;
     }
     .card-img img {
         width: 100%;
